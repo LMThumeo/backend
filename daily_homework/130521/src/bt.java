@@ -19,11 +19,13 @@ public class bt {
                 diffMax=a[i]-min;
                 end=i;
             }
-            if(a[i]<min){
-                min=a[i];
-                start=i;
-            }
+            if(a[i]<min)    min=a[i];
         }
+        for(int i=0;i<end;i++)
+            if(a[end]-diffMax==a[i]){
+                start=i;
+                break;
+            }
 
         System.out.println("max: "+diffMax);
         System.out.println("vi tri: "+(start+1)+" "+(end+1));
