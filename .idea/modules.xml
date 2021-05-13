@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/daily_homework/050521/050521.iml" filepath="$PROJECT_DIR$/daily_homework/050521/050521.iml" />
+      <module fileurl="file://$PROJECT_DIR$/daily_homework/060521/060521.iml" filepath="$PROJECT_DIR$/daily_homework/060521/060521.iml" />
+      <module fileurl="file://$PROJECT_DIR$/daily_homework/120521/120521.iml" filepath="$PROJECT_DIR$/daily_homework/120521/120521.iml" />
+      <module fileurl="file://$PROJECT_DIR$/daily_homework/130521/130521.iml" filepath="$PROJECT_DIR$/daily_homework/130521/130521.iml" />
+      <module fileurl="file://$PROJECT_DIR$/daily_homework/140521/140521.iml" filepath="$PROJECT_DIR$/daily_homework/140521/140521.iml" />
+      <module fileurl="file://$PROJECT_DIR$/daily_homework/150521/150521.iml" filepath="$PROJECT_DIR$/daily_homework/150521/150521.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/backend.iml" filepath="$PROJECT_DIR$/.idea/backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/daily_homework/daily_homework.iml" filepath="$PROJECT_DIR$/daily_homework/daily_homework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lessonFriday/lessonFriday.iml" filepath="$PROJECT_DIR$/lessonFriday/lessonFriday.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test1/test1.iml" filepath="$PROJECT_DIR$/test1/test1.iml" />
+    </modules>
+  </component>
+</project>

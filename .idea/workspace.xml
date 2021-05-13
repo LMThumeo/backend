@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b7d6c9a2-5c35-49c0-833e-9858b05ac437" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/daily_homework/180521/src/LinkedList.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test1/src/cau3.java" beforeDir="false" />
+    </list>
+    <list id="c7b9495e-8742-4298-8541-d510c32ba026" name="130521" comment="130521&#10;&#10;(cherry picked from commit 61975c561c3597476bbda6c262974c1b7d0d0fec)">
+      <changelist_data name="LMThumeo" email="nilelouis2611@gmail.com" date="1620898355000" />
+      <change beforePath="$PROJECT_DIR$/daily_homework/130521/src/bt.java" beforeDir="false" afterPath="$PROJECT_DIR$/daily_homework/130521/src/bt.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/daily_homework/180521" />
+  </component>
+  <component name="ProjectId" id="1se3dw0lMStg3z5oLoWPVzpoEjT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="FrequencyOfWord" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FrequencyOfWord" />
+      <module name="test1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b7d6c9a2-5c35-49c0-833e-9858b05ac437" name="Default Changelist" comment="" />
+      <created>1621219325834</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621219325834</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

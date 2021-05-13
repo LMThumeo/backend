@@ -26,7 +26,6 @@ public class bt {
                 start=i;
                 break;
             }
-
         System.out.println("max: "+diffMax);
         System.out.println("vi tri: "+(start+1)+" "+(end+1));
         

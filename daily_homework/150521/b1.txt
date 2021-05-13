@@ -10,7 +10,7 @@ Phân biệt Array và ArrayList
         +   ArrayList: có thể sử dụng
     -   Duyệt các phần tử:
         +   Array: sử dụng for/foreach
-        +   ArrayList: sử dụng Iterator
+        +   ArrayList: sử dụng Iterator, có thể dùng foreach
     -   Phương thức:
         +   Array: chỉ hỗ trợ length()
         +   ArrayList: hỗ trợ nhiều phương thức như: add(), set(), remove(),...

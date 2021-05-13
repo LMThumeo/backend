@@ -1,0 +1,19 @@
+So sánh while và do...while
+Giống: đều là vòng lặp với số lần không biết trước
+Khác:
+    Cấu trúc: 
+        +   while   (điều kiện )
+            do      
+                { câu lệnh; }
+        +   do   
+                { câu lệnh; }
+            while   (điều kiện)
+    Hoạt động:
+        +   while: 
+            *   Kiểm tra điều kiện,  nếu đúng thì thực hiện các câu lệnh sau do và quay lại kiểm tra điều kiện, 
+                nếu sai thì không thực hiện các câu lệnh và thoát khỏi vòng lặp
+            *   Do điều kiện được kiểm tra trước nên có thể sẽ không có lệnh nào sau do được thực hiện
+        +   do...while: 
+            *   Tương tự như while, nhưng thực hiện câu lệnh trước rồi mới kiểm tra điều kiện
+                đúng thì tiếp tục vòng lặp, sai thì thoát khỏi vòng lặp 
+            *   Các lệnh sau do luôn luôn dduwwocj thực hiện ít nhất 1 lần.               
