@@ -7,30 +7,25 @@ public class cau3 {
 
         System.out.println("nhap chuoi thu nhat: ");
         Map<String, Integer> m=new HashMap<>();
-        while(sc.hasNextLine()){
-            String s=sc.nextLine();
-            StringTokenizer sTokenizer=new StringTokenizer(s);
-            while(sTokenizer.hasMoreTokens()){
-                String sTemp=sTokenizer.nextToken();
-                if(m.containsKey(sTemp))
-                    m.replace(sTemp, m.get(sTemp)+1);
-                else m.put(sTemp,1);
-            }                                 
+        String s=sc.nextLine();
+        StringTokenizer sTokenizer=new StringTokenizer(s);
+        while(sTokenizer.hasMoreTokens()){
+            String sTemp=sTokenizer.nextToken();
+            if(m.containsKey(sTemp))
+                m.replace(sTemp, m.get(sTemp)+1);
+            else m.put(sTemp,1);
         }
         System.out.println("nhap chuoi thu 2: ");
         Set<String> set=new HashSet<>();
-        while(sc.hasNextLine()){
-            String s=sc.nextLine();
-            StringTokenizer sTokenizer=new StringTokenizer(s);
-            while(sTokenizer.hasMoreTokens())
-                set.add(sTokenizer.nextToken());
-        }
+        s=sc.nextLine();
+        sTokenizer=new StringTokenizer(s);
+        while(sTokenizer.hasMoreTokens())
+            set.add(sTokenizer.nextToken());
 
         for (String i : set) {
             if(m.containsKey(i))
                 System.out.println(i+": "+m.get(i));
         }
-        System.out.println(m);
         sc.close();
     }
     

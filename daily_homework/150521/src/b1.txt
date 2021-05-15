@@ -1,0 +1,17 @@
+Phân biệt Array và ArrayList
+    -   kích thước: 
+        +   Array có kích thước cố định
+        +   ArrayList có thể tự động thay đổi kích thước
+    -   kiểu dữ liệu:
+        +   Array có thể lưu trữ kiểu dữ liệu nguyên thủy hoặc đối tượng
+        +   ArrayList chỉ lưu trữ đối tượng, lớp wrapper
+    -   Generics: 
+        +   Array: không áp dụng
+        +   ArrayList: có thể sử dụng
+    -   Duyệt các phần tử:
+        +   Array: sử dụng for/foreach
+        +   ArrayList: sử dụng Iterator
+    -   Phương thức:
+        +   Array: chỉ hỗ trợ length()
+        +   ArrayList: hỗ trợ nhiều phương thức như: add(), set(), remove(),...
+    
