@@ -4,6 +4,102 @@
 
 Inversion of Control: là một design pattern tuân thủ theo nguyên lí Dependency Inversion, trong đó các thành phần nó dựa vào để làm việc bị đảo ngược quyền điều khiển khi so sánh với lập trình truyền thống.
 
+## II. Spring IoC container and beans
+
+- IoC Container sẽ tạo các đối tượng, lắp ráp chúng lại với nhau, cấu hình các đối tượng và quản lí vòng đời của chúng. Bean chính là các thành phần đối tượng này.
+
+- Giao diện **org.springframework.context.ApplicationContext** đại diện cho Spring IoC container. Container đọc hướng dẫn về đối tượng khi nào cần khởi tạo, định cấu hình, lắp ráp bằng cách đọc configuration metadata. Configuration metadata được biểu diễn bằng XML, Java annotation, hoặc Java code.
+
+1. Annotation-based configuration
+
+    a. @Required
+
+    - Dùng trên method setter để chú thích các dependency muốn đưa vào thông qua XML
+
+    ```java
+    pulic class Student{
+        private Name name;
+        void setName( String name){
+            this.name = name;
+        }
+    }
+    ```
+
+    ```xml
+    <bean id = "student" class = "Student">
+        <property name = "name" value = "Thu"/>
+    </bean>
+    ```
+
+    - Nếu trong XML không có giá tri cho biến đó thì container sẽ ném ra BeanInitializationException.
+
+    b. Autowired
+
+    - Dùng để chú thích một dependency sẽ được tiêm vào từ Spring IoC Container.
+
+    - Có 3 kiểu @Autowired
+
+        - Contructor:
+
+        ```java
+        pulic class Student{
+            private Task task;
+
+            @Autowired
+            public Student(Task task){
+                this.task = task;
+            }
+        }
+        ```
+
+        - Setter:
+
+        ```java
+        pulic class Student{
+            private Task task;
+
+            @Autowired
+            public setTask(Task task ){
+                this.task = task;
+            }
+        }
+        ```
+
+        - Attribute:
+
+        ```java
+        pulic class Student{
+
+            @Autowired
+            private Task task;
+        }
+        ```
+
+    c. Qualifiter
+
+    - @Qualififiter có chức năng tương tự như @AutoWired nhưng được dùng trong khi có nhiều hơn một bean có cùng kiểu dữ liệu trong Spring IoC container.
+
+    ```java
+
+    @Qualifiter("primaryStudent")
+    public class PrimaryStudent implements Student {}
+
+    @Qualifiter("secondaryStudent")
+    public class SecondaryStudent implements Student {}
+    ```
+
+    ```java
+    public class Fee {
+        @Autowired
+        @Qualifider("primaryStudent")
+        Student student;
+    }
+    ```
+
+    >Nếu có nhiều hơn 1 bean cùng loại trong vùng chứa, ngoại lệ NoUniqueBeanDefinitionException sẽ dược ném ra
+
+2. Java-based configuration
+
 ## II. DI (Dependency injection)
 
 ### 1. DI là gì (What)
