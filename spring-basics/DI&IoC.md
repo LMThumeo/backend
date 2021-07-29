@@ -19,6 +19,7 @@ Inversion of Control: là một design pattern tuân thủ theo nguyên lí Depe
     ```java
     pulic class Student{
         private Name name;
+        @Required
         void setName( String name){
             this.name = name;
         }
@@ -33,10 +34,10 @@ Inversion of Control: là một design pattern tuân thủ theo nguyên lí Depe
 
     - Nếu trong XML không có giá tri cho biến đó thì container sẽ ném ra BeanInitializationException.
 
-    b. Autowired
+    b. @Autowired
 
     - Dùng để chú thích một dependency sẽ được tiêm vào từ Spring IoC Container.
-
+    - Ưu tiên tìm kiếm bean theo thứ tự: **kiểu, qualifiter, tên**
     - Có 3 kiểu @Autowired
 
         - Contructor:
@@ -75,7 +76,7 @@ Inversion of Control: là một design pattern tuân thủ theo nguyên lí Depe
         }
         ```
 
-    c. Qualifiter
+    c. @Qualifiter
 
     - @Qualififiter có chức năng tương tự như @AutoWired nhưng được dùng trong khi có nhiều hơn một bean có cùng kiểu dữ liệu trong Spring IoC container.
 
@@ -90,6 +91,7 @@ Inversion of Control: là một design pattern tuân thủ theo nguyên lí Depe
 
     ```java
     public class Fee {
+
         @Autowired
         @Qualifider("primaryStudent")
         Student student;
@@ -98,7 +100,105 @@ Inversion of Control: là một design pattern tuân thủ theo nguyên lí Depe
 
     >Nếu có nhiều hơn 1 bean cùng loại trong vùng chứa, ngoại lệ NoUniqueBeanDefinitionException sẽ dược ném ra
 
+    d. @Resoure
+
+    - Hoạt động tương tự @Autowired
+    - Ưu tiên tìm kiếm bean theo thứ tự lần lượt: **tên, kiểu, qualifiter**.
+
+    ```java
+    pulic class Student{
+        private Name name;
+        @Resoure(name = "studentName")
+        void setName( String name){
+            this.name = name;
+        }
+    }
+    ```
+
+    - Chỉ áp dụng cho field và setter method.
+
 2. Java-based configuration
+
+    a. @Configuration và @Bean
+
+    - @Bean đánh dấu việc khởi tạo, cấu hình mộ đối tượng mới được quản lí bởi IoC Spring.
+    - Các lớp được đánh dấu @Configuration cho phép các phụ thuộc giữa các bean có thể được định nghĩa đơn giản bằng các gọi mehod @Bean trong cùng lớp.
+
+    ```java
+    @Configuration
+    public class StudentServiceConfig {
+        @Bean
+        public Student student() {
+            return new Student();
+        }
+    }
+    ```
+
+    >Mặc định tên của bean sẽ trùng với tên method. Nếu bạn muốn thay đổi, bạn có thể gán tên cho bean. VD: @Bean("firstStudent")
+
+    b. @Scope
+
+    - Dùng để xác định phạm vi của lớp @Component hoặc @Bean. Mặc định của @Scope là singleton.
+
+    ```java
+    @Component
+    @Scope("prototype")
+    public class Student {}
+    ```
+
+    c. @Import
+
+    - Cho phép tải các @Bean từ một class @Configuration khác.
+
+    ```java
+    @Configuration
+    public class PenConfig {
+        @Bean
+        public Pen getPen(){
+            return new Pen();
+        }
+    }
+
+    @Configuration
+    @Import(PenConfig.class)
+    public class StudentConfig {
+        @Bean
+        public Student getStudent(){
+            return new Student();
+        }
+    }
+    ```
+
+    - Khi khởi tạo context, thay vì phải khởi tạo cả PenConfig.class và StudentConfig.class, bạn chỉ cần khởi tạo context cho StudentConfig.class
+
+    ```java
+    public static void main(String[] args) {
+    ApplicationContext ctx = new AnnotationConfigApplicationContext(StudentConfig.class);
+
+    // now both beans PenConfig and StudentConfig will be available...
+    PenConfig penConfig = ctx.getBean(PenConfig.class);
+    StudentConfig studentConfig = ctx.getBean(StudentConfig.class);
+    }
+    ```
+
+    d. @Lazy
+
+    - Các bean được khởi tạo mặc định khi khởi động. Tuy nhiên, bạn có thể cấu hình để nó được tạo khi mà bạn yêu cầu tới nó với @Lazy.
+
+    ```java
+    @Configuration
+    @Lazy
+    public class StudentConfig {
+
+        @Bean
+        @Lazy(false)
+        Student getStudent() {
+            return new Student();
+        }
+    }
+    ```
+
+    - Khi đăt @Lazy cùng với @Configuration thì toàn bộ bean bên trong sẽ khởi tạo theo kiểu lazy. Tuy nhiên bạn cũng có thể thêm tham số false để đánh dấu bean nó **không** áp dụng chế độ lazy.
 
 ## II. DI (Dependency injection)
 
